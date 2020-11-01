@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWasmYouTubeApi.Server", "Server\BlazorWasmYouTubeApi.Server.csproj", "{5652FB29-0C9B-46FC-854D-4973838CD4FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWasmYouTubeApi.Client", "Client\BlazorWasmYouTubeApi.Client.csproj", "{93559BE8-FCE1-4D1F-A72D-E57FC5F86EC9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5652FB29-0C9B-46FC-854D-4973838CD4FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5652FB29-0C9B-46FC-854D-4973838CD4FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5652FB29-0C9B-46FC-854D-4973838CD4FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5652FB29-0C9B-46FC-854D-4973838CD4FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93559BE8-FCE1-4D1F-A72D-E57FC5F86EC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93559BE8-FCE1-4D1F-A72D-E57FC5F86EC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93559BE8-FCE1-4D1F-A72D-E57FC5F86EC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93559BE8-FCE1-4D1F-A72D-E57FC5F86EC9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {72376E52-1536-418A-996C-DDFC4E938E02}
+	EndGlobalSection
+EndGlobal

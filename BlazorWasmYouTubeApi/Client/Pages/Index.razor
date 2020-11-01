@@ -1,0 +1,19 @@
+﻿@page "/"
+
+<h1>Blazor Wasm YouTube Api Issues</h1>
+<p>Player events (playing, paused etc) work fine on first load, but don't work on sub-sequent loads.</p>
+<p>My question on <a href="">StackOverflow</a></p>
+<p>Closest match found on <a href="https://stackoverflow.com/questions/52377826/youtube-iframe-player-not-firing-events-after-change-iframe-parent-container" target="_blank">StackOverflow</a></p>
+
+<ul>
+    <li>
+        Go to video page, see events work, click on home to get back to this page and click on link to go back to video page. Event won't work.
+    </li>
+    <li>
+        Go to video page, see events work, click on second video link on video page. Events won't work.
+    </li>
+</ul>
+
+<p>Javascript in BlazorWasmYouTubeApi.Client > wwwroot > index.html</p>
+
+<p><a href="video/8RkV64AMb4Y">Video page</a></p>

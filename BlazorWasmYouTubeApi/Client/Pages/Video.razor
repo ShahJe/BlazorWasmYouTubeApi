@@ -1,0 +1,29 @@
+﻿@page "/video/{VideoId}"
+@inject IJSRuntime JSRuntime
+
+<h3>Video</h3>
+<p>Open console and look for messages in orange. Hit play and pause to trigger different player state events.</p>
+
+<div class="embed-responsive embed-responsive-4by3" style="max-width:800px;">
+    <iframe id="iVideo"
+            class="embed-responsive-item"
+            src="https://www.youtube.com/embed/@VideoId?enablejsapi=1&autoplay=1&rel=0&wmode=transparent"            
+            allowfullscreen>
+    </iframe>
+</div>
+
+<div>
+    <a href="video/8RkV64AMb4Y">First Video</a>
+    <br/>
+    <a href="video/QK2PjNt6bcY">Second Video</a>
+</div>
+
+@code {
+    [Parameter]
+    public string VideoId { get; set; }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        await JSRuntime.InvokeVoidAsync("videoFunctions.setupPlayer", DotNetObjectReference.Create(this)).ConfigureAwait(false);
+    }
+}

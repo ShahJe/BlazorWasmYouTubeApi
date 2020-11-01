@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Blazor Wasm YouTube Api</title>
+    <base href="/" />
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/app.css" rel="stylesheet" />
+    <link href="manifest.json" rel="manifest" />
+    <link rel="apple-touch-icon" sizes="512x512" href="icon-512.png" />
+</head>
+
+<body>
+    <app>Loading...</app>
+
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+    <script type="text/javascript">
+        var myDotNet;
+
+        window.videoFunctions = {
+            setupPlayer: function (page) {
+                console.log("%cSetupPlayer called.", "color:orange;");
+                //if (myDotNet == null) {
+                myDotNet = page;
+
+                var tag = document.createElement('script');
+                tag.src = "https://www.youtube.com/player_api";
+
+                var firstScriptTag = document.getElementsByTagName('script')[0];
+                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+            //}
+            }
+        };
+
+        var player;
+
+        if (document.getElementById('iVideo') != null) {
+            console.log('%cVideo page', "font-color:orange;");
+            //var scripts = document.getElementsByTagName('script');
+            //var i = scripts.length;
+            //while (i--) {
+            //    if (scripts[i].id === "www-widgetapi-script" || scripts[i].src === "https://www.youtube.com/player_api") {
+            //        scripts[i].parentNode.removeChild(scripts[i]);
+            //    }
+            //}
+
+            var tag = document.createElement('script');
+            tag.src = "https://www.youtube.com/player_api";
+
+            var firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        }
+
+        window.onYouTubeIframeAPIReady = function () {
+            console.log("%cApi ready.", "color:orange;");
+            player = new YT.Player('iVideo', {
+                //videoId: "0V9AKV0O9RM",
+                fs: 1,
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+
+        window.onPlayerReady = function (event) {
+            console.log("%cPlayer ready: " + event.data, "color:orange;");
+        }
+
+        window.onPlayerStateChange = function (event) {
+            console.log("%cPlayer state changed: " + event.data, "color:orange;");
+        }
+    </script>
+    <script src="_framework/blazor.webassembly.js"></script>
+    <script>navigator.serviceWorker.register('service-worker.js');</script>
+</body>
+
+</html>

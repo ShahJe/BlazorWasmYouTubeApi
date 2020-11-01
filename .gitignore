@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/BlazorWasmYouTubeApi/.vs/BlazorWasmYouTubeApi
+/BlazorWasmYouTubeApi/Client/bin
+/BlazorWasmYouTubeApi/Client/obj
+/BlazorWasmYouTubeApi/Server/bin
+/BlazorWasmYouTubeApi/Server/obj
+/BlazorWasmYouTubeApi/Shared/bin
+/BlazorWasmYouTubeApi/Shared/obj
